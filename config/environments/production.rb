@@ -111,11 +111,11 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
-  config.action_mailer.default_url_options = { host: 'dmi-daily.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'dmi-daily.deeco.dk' }
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV['SMTP_USERNAME'],
     :password => ENV['SMTP_PASSWORD'],
-    :domain => 'dmi-daily.herokuapp.com',
+    :domain => 'dmi-daily.deeco.dk',
     :address => ENV['SMTP_HOST'],
     :port => 587,
     :authentication => :plain,
