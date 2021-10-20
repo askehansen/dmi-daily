@@ -33,9 +33,12 @@ class Comment < ApplicationRecord
     body.to_s
   end
 
+  def compare
+    [title, body]
+  end
+
   def same_as?(other)
-    return false unless other
-    [title, body] == [other.title, other.body]
+    compare == other&.compare
   end
 
   def body_plain
