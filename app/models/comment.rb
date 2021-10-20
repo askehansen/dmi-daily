@@ -38,4 +38,12 @@ class Comment < ApplicationRecord
     [title, body] == [other.title, other.body]
   end
 
+  def body_plain
+    Rails::Html::FullSanitizer.new.sanitize(body).strip
+  end
+
+  def summary
+    body_plain.truncate(200)
+  end
+
 end
