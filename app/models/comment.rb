@@ -11,7 +11,7 @@ class Comment < ApplicationRecord
     html = Oga.parse_html(response.body)
     
     comment = new
-    comment.title = html.at_css(".csc-header h1").text.strip
+    comment.title = html.at_css(".csc-header").text.strip
     comment.body = parse_body(html.at_css(".article-content-old"))
 
     comment
