@@ -65,3 +65,7 @@ gem "damerau-levenshtein", "~> 1.3"
 gem "pry-rails", "~> 0.3.9"
 
 gem "clockwork", "~> 3.0"
+
+gem 'net-smtp', require: false
+gem 'net-pop', require: false
+gem 'net-imap', require: false
