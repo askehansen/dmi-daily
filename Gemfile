@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '3.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
@@ -57,3 +57,11 @@ gem 'slim-rails'
 gem "http", "~> 5.0"
 
 gem "oga", "~> 3.3"
+
+gem "pgsync", "~> 0.6.8", :group => :development
+
+gem "damerau-levenshtein", "~> 1.3"
+
+gem "pry-rails", "~> 0.3.9"
+
+gem "clockwork", "~> 3.0"
